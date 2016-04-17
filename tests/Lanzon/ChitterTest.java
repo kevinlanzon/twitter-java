@@ -29,7 +29,7 @@ public class ChitterTest {
     Chitter chitter = new Chitter();
 
     @Test
-    public void Message() {
+    public void welcomeMessage() {
         chitter.main(args);
         assertEquals("Welcome to Chitter!", outContent.toString());
     }
