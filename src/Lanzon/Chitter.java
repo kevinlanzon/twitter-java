@@ -12,21 +12,31 @@ public class Chitter {
     }
 
     public void welcomeMessage() {
-        System.out.print("Welcome to Chitter!\n");
+        System.out.println("*** Welcome to Chitter! ***\n");
 
     }
 
     public void inputUsername() {
-        System.out.print("Please enter your username: ");
+        System.out.println("Please enter your username: ");
         String username = readInput();
         user = new User(username);
-        System.out.print("Hello " + "@" + username + "!\n");
+        System.out.println("Hello " + "@" + username + "!\n");
+        menu();
     }
 
     public String readInput() {
         Scanner input = new Scanner(System.in).useDelimiter("\n");
         String output = input.next();
         return output;
+    }
+
+    public void menu() {
+        System.out.println("*** Main Menu ***\n");
+        System.out.print("Please choose: \n");
+        System.out.print("1. Create a post\n");
+        System.out.print("2. View your posts\n");
+        System.out.print("3. View another user's posts\n");
+        System.out.print("4. Quit\n");
     }
 
 }

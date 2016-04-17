@@ -33,7 +33,7 @@ public class ChitterTest {
     @Test
     public void welcomeMessage() {
         chitter.main(args);
-        assertEquals("Welcome to Chitter!\n", outContent.toString());
+        assertEquals("*** Welcome to Chitter! ***\n", outContent.toString());
     }
 
     @Test
