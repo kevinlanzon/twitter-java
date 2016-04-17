@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.io.ByteArrayInputStream;
+
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
@@ -31,7 +33,16 @@ public class ChitterTest {
     @Test
     public void welcomeMessage() {
         chitter.main(args);
-        assertEquals("Welcome to Chitter!", outContent.toString());
+        assertEquals("Welcome to Chitter!\n", outContent.toString());
+    }
+
+    @Test
+    public void inputUsername() {
+        chitter.main(args);
+        ByteArrayInputStream input = new ByteArrayInputStream("kevin".getBytes());
+        System.setIn(input);
+        assertEquals("Hello @kevin!\n", outContent.toString());
+
     }
 
 }
