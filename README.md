@@ -26,5 +26,6 @@ To run
 -----
 ```sh
 $ git clone git@github.com:kevinlanzon/twitter-java.git
+$ cd twitter-java
 ```
 Open and build your run in IntelliJ (I just broke everything trying to add Gradle to run the build!)
