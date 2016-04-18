@@ -4,11 +4,16 @@ import java.util.Scanner;
 
 public class Chitter {
     public User user;
+    public static boolean quit = false;
 
     public static void main(String[] args) {
         Chitter chitter = new Chitter();
         chitter.welcomeMessage();
         chitter.inputUsername();
+        if (!quit) {
+            chitter.menu();
+            chitter.userChoice();
+        }
     }
 
     public void welcomeMessage() {
@@ -21,7 +26,6 @@ public class Chitter {
         String username = readInput();
         user = new User(username);
         System.out.println("Hello " + "@" + username + "!\n");
-        menu();
     }
 
     public String readInput() {
@@ -37,6 +41,27 @@ public class Chitter {
         System.out.print("2. View your posts\n");
         System.out.print("3. View another user's posts\n");
         System.out.print("4. Quit\n");
+    }
+
+    public void userChoice() {
+        String input = readInput();
+        if(input.equals("1")) {
+            createPost();
+        }
+        else if(input.equals("4")) {
+            quit = true;
+            System.out.println("Goodbye!");
+        }
+        else {
+            System.out.print("That is not a valid option, please try again: ");
+            userChoice();
+        }
+    }
+
+    public void createPost() {
+        System.out.print("What's on your mind? ");
+        String post = readInput();
+        user.addPost(post);
     }
 
 }

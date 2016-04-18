@@ -42,7 +42,6 @@ public class ChitterTest {
         ByteArrayInputStream input = new ByteArrayInputStream("kevin".getBytes());
         System.setIn(input);
         assertEquals("Hello @kevin!\n", outContent.toString());
-
     }
 
 }
