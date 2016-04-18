@@ -48,6 +48,9 @@ public class Chitter {
         if(input.equals("1")) {
             createPost();
         }
+        else if (input.equals("2")) {
+            viewPosts();
+        }
         else if(input.equals("4")) {
             quit = true;
             System.out.println("Goodbye!");
@@ -62,6 +65,13 @@ public class Chitter {
         System.out.print("What's on your mind? ");
         String post = readInput();
         user.addPost(post);
+        viewPosts();
+    }
+
+    public void viewPosts() {
+        for (int i = 0; i < user.posts.size(); i++) {
+            System.out.print(user.posts.get(i));
+        }
     }
 
 }

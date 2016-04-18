@@ -12,6 +12,6 @@ Implement a console-based social networking application (similar to Twitter) wit
 ### Features:
 
 - [x] **User creating**: a new user called *Spike* can be created
-- [ ] **Posting**: *Spike* can publish messages to a personal timeline
+- [x] **Posting**: *Spike* can publish messages to a personal timeline
 - [ ] **Reading**: *Spike* can view *Nikesh’s* timeline
 - [ ] **Following**: *Leo* can subscribe to *Spike* and *Nikesh's* timelines, and view an aggregated list of all subscriptions
